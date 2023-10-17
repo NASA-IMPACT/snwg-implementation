@@ -16,7 +16,7 @@ body:
         - M1 Open Source Science (OSS)
         - M2 Assessment Support
         - M3 Cycle 4
-        - M4 Cycles 3
+        - M4 Cycle 3
         - M5 Cycle 1 & 2
         - M6 Stakeholder Engagement Program (SEP)
         - Backlog
@@ -56,7 +56,7 @@ body:
   - type: textarea
     id: Examples
     attributes:
-      label: Examples
+      label: Examples and Resources
       description: if applicable, include examples of work that the issue will result in or use in development.
       placeholder: This type of document is what I am looking for...
     validations:
