@@ -1,4 +1,4 @@
-name: Issue Form for evaluation
+name: Issue Form
 description: Create an Issue
 title: ISSUE TITLE
 projects: Test Assessment
@@ -13,12 +13,12 @@ body:
       label: Milestone
       description: What Milestone does this issue apply to? If issue is unrelated to previously listed Milestones, select External Work Request and provide full details and justification.
       options:
-        - M1 (Develop and administer Asana)
-        - M2 (Develop and administer the Report Generation Tool (RGT))
-        - M3 (Support tri-agency SNWG assessment teams)
-        - M4 (Contribute to NASAs OMB presentation)
-        - M5 (Support NASAs SNWG principal)
-        - M6 (Conduct lessons learned retrospective)
+        - M1 Open Source Science (OSS)
+        - M2 Assessment Support
+        - M3 Cycle 4
+        - M4 Cycles 3
+        - M5 Cycle 1 & 2
+        - M6 Stakeholder Engagement Program (SEP)
         - Backlog
         - External Work Request
       default: 0
