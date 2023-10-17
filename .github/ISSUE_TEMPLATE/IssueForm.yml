@@ -1,0 +1,90 @@
+name: Issue Form for evaluation
+description: Create an Issue
+title: ISSUE TITLE
+projects: Test Assessment
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the Issue template! The values you add will be converted to a properly formatted Issue for the SNWG Assessment Project.
+  - type: dropdown
+    id: Milestones
+    attributes:
+      label: Milestone
+      description: What Milestone does this issue apply to? If issue is unrelated to previously listed Milestones, select External Work Request and provide full details and justification.
+      options:
+        - M1 (Develop and administer Asana)
+        - M2 (Develop and administer the Report Generation Tool (RGT))
+        - M3 (Support tri-agency SNWG assessment teams)
+        - M4 (Contribute to NASAs OMB presentation)
+        - M5 (Support NASAs SNWG principal)
+        - M6 (Conduct lessons learned retrospective)
+        - Backlog
+        - External Work Request
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: Quarter
+    attributes:
+      label: Quarter
+      description: What Quarter does this issue apply to? If selecting multiple quarters, please include the expected task breakdown across quarters in your task description or implementation considerations. 
+      multiple: true
+      options:
+        - Q1 (1 Oct to 31 Dec)
+        - Q2 (1 Jan to 31 Mar)
+        - Q3 (1 Apr to 30 Jun)
+        - Q4 (1 Jul to 30 Sep)
+      default: 1
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Add two to three sentences that explain the context of this issue and what it will achieve.
+      placeholder: Questions to consider when completing this section...
+        - What is the motivation for this issue? 
+        - Is there any needed background knowledge that would be helpful to the assignee? 
+        - Is there a specific requestor for this issue? 
+        - Are there time constraints?
+        - What are the possible steps to completion? 
+        - Who are the anticipated assignees? 
+        - What problem will this issue solve?  
+    validations:
+      required: true
+  - type: textarea
+    id: Examples
+    attributes:
+      label: Examples
+      description: if applicable, include examples of work that the issue will result in or use in development.
+      placeholder: This type of document is what I am looking for...
+    validations:
+      required: false
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: Acceptance Criteria in the form of a tasklist. Once the issue has been created, individual tasks can be converted to issues if needed. 
+      value: "- [ ] "
+    validations:
+      required: true
+  - type: textarea
+    id: implementation-considerations
+    attributes:
+      label: Implementation Blockers or Dependencies
+      description: |
+        Points that need to be considered when developing this feature/writing this doc
+      placeholder: Why have you selected multiple quarters? What other organizations or resources does this issue depend on to be completed?
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Related Issues
+      description: |
+        Add cards on which this issue depends
+        Github automatically provides a list of possible issues if you start by typing a `#`
+      placeholder: depends on
+    validations:
+      required: false
