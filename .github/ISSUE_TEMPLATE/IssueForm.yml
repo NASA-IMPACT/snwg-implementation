@@ -1,6 +1,5 @@
 name: Issue Form
 description: Create an Issue
-title: ISSUE TITLE
 projects: Test Assessment
 body:
   - type: markdown
