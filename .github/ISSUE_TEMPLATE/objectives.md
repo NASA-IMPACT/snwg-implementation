@@ -1,5 +1,5 @@
 ---
-name: Objectives
+name: 
 about: Detailed overview of a concept
 title: Objectives
 labels: PI 23.3
