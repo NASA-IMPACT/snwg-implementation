@@ -8,7 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        # 📊 ADMG Project Status Report
+        # 📊 Solution Project Status Report
 
   - type: dropdown
     id: project-status
@@ -98,8 +98,8 @@ body:
   - type: input
     id: product-url
     attributes:
-      label: 🔗 CASEI Portal
-      placeholder: "https://impact.earthdata.nasa.gov/casei/"
+      label: 🔗 Primary Product URL
+      placeholder: "Enter product URL"
     validations:
       required: true
 
@@ -108,7 +108,7 @@ body:
     attributes:
       label: Product Description
       placeholder: "Brief description of the product and its purpose..."
-      value: "An online portal cataloging NASA suborbital campaigns and airborne missions, providing centralized access to DAAC-hosted data."
+      value: "Enter a brief description of the product and its purpose..."
     validations:
       required: true
 
