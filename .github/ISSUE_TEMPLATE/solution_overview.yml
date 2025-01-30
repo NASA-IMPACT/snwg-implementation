@@ -1,0 +1,231 @@
+name: Solution Project Status Template
+description: Template for tracking solution project status
+title: "[Solution]: "
+labels: ["solution-overview"]
+projects: ["NASA-IMPACT/139"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # 📊 Solution Project Status Report
+        Please fill out the information below to create a new solution project status report.
+
+  - type: dropdown
+    id: project-status
+    attributes:
+      label: 📈 Project Status
+      options:
+        - Planning
+        - Development
+        - Operational
+        - Maintenance
+    validations:
+      required: true
+
+  - type: input
+    id: funding-period
+    attributes:
+      label: Funding Period
+      placeholder: "e.g., FY24-FY25"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: assessment-cycle
+    attributes:
+      label: Assessment Cycle
+      options:
+        - "1 (2016)"
+        - "2 (2017)"
+        - "3 (2018)"
+        - "4 (2019)"
+        - "5 (2020)"
+        - "6 (2021)"
+        - "7 (2022)"
+        - "8 (2023)"
+        - "9 (2024)"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: thematic-areas
+    attributes:
+      label: 🎯 Thematic Areas
+      description: Select all applicable thematic areas for this solution
+      options:
+        - label: Atmospheric Composition
+        - label: Carbon Cycle & Ecosystems
+        - label: Disaster Response
+        - label: Earth Surface & Interior
+        - label: Infrastructure/Other
+        - label: Land Cover/Land Use Change
+        - label: Ocean & Cryosphere
+        - label: Water & Energy Cycle
+        - label: Weather & Atmospheric Dynamics
+    validations:
+      required: true
+
+  - type: input
+    id: implementation-lead
+    attributes:
+      label: 👨‍💼 Implementation Lead
+      placeholder: "Name"
+    validations:
+      required: true
+
+  - type: input
+    id: project-scientist
+    attributes:
+      label: 🔬 Project Scientist
+      placeholder: "Name"
+    validations:
+      required: true
+
+  - type: input
+    id: partner-org
+    attributes:
+      label: 🤝 Partner Organization
+      placeholder: "Organization name"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sep-mandate
+    attributes:
+      label: SNWG MO Mandate Status
+      options:
+        - "Yes"
+        - "No"
+        - "Pending Review"
+    validations:
+      required: true
+
+  - type: input
+    id: stakeholder-survey
+    attributes:
+      label: 📝 Stakeholder Survey Link
+      placeholder: "https://docs.google.com/..."
+
+  - type: input
+    id: product-url
+    attributes:
+      label: 🔗 Primary Product URL
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: product-description
+    attributes:
+      label: Product Description
+      placeholder: "Brief description of the product and its purpose..."
+    validations:
+      required: true
+
+  - type: input
+    id: sep-board
+    attributes:
+      label: 📋 SEP Board Link
+      placeholder: "https://github.com/..."
+
+  - type: textarea
+    id: key-stakeholders
+    attributes:
+      label: Key Stakeholders
+      placeholder: "List key stakeholders..."
+    validations:
+      required: true
+
+  - type: input
+    id: user-assessment
+    attributes:
+      label: 🔮 End User Assessment Results
+      placeholder: "https://docs.google.com/..."
+
+  - type: input
+    id: assessment-folder
+    attributes:
+      label: 🗃️ Assessment Drive Folder
+      placeholder: "https://drive.google.com/..."
+
+  - type: input
+    id: portal-url
+    attributes:
+      label: 🌐 NASA/ST Portal URL
+      placeholder: "https://earthdata.nasa.gov/..."
+
+  - type: input
+    id: training-url
+    attributes:
+      label: 📚 Training Resources URL
+      placeholder: "https://github.com/..."
+
+  - type: input
+    id: toolkit-url
+    attributes:
+      label: 🛠️ Implementation Toolkit URL
+      placeholder: "https://github.com/..."
+
+  - type: input
+    id: sow-url
+    attributes:
+      label: 📄 Statement of Work URL
+      placeholder: "https://docs.google.com/..."
+
+  - type: dropdown
+    id: fact-sheet
+    attributes:
+      label: 🎨 Fact Sheet Status
+      options:
+        - "Not Started"
+        - "In Development"
+        - "Complete"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: lifecycle-pre-formulation
+    attributes:
+      label: Pre-Formulation Phase
+      options:
+        - label: 🎬 HQ Kickoff
+        - label: 🤝 Solution Provider Kickoff
+        - label: 📝 Project Plan Draft
+        - label: 🎯 ATP DG Milestone
+        - label: ✍️ ATP DG Memo Completion
+
+  - type: checkboxes
+    id: lifecycle-formulation
+    attributes:
+      label: Formulation Phase
+      options:
+        - label: 📊 DAAC Selection Product Summary
+        - label: 🗣️ Agency Stakeholder Co-design Sessions
+        - label: ✅ ESDIS DAAC Selection Process
+        - label: 📜 Inter-Project Agreement
+        - label: 📄 Interface Control Document
+        - label: 📋 Project Plan Finalization
+        - label: 🎯 F2I DG Completion
+        - label: ✅ Project Plan Baseline
+
+  - type: checkboxes
+    id: lifecycle-implementation
+    attributes:
+      label: Implementation Phase
+      options:
+        - label: 🧪 Operational Testing
+        - label: 🎯 ORR Completion
+
+  - type: checkboxes
+    id: lifecycle-operations
+    attributes:
+      label: Operations Phase
+      options:
+        - label: ✅ PVR Completion
+        - label: 🚀 Provisional Operations Launch
+        - label: 🌟 Validated Operations Launch
+        - label: 📢 Closeout Announcement
+        - label: 📝 Final Report Preparation
+        - label: ✍️ DG Memo Processing
+        - label: 🗄️ Documentation Archival
