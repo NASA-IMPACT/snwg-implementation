@@ -16,10 +16,10 @@ body:
     attributes:
       label: 📈 Project Status
       options:
-        - Planning
-        - Development
+        - Formulation
+        - Implementation
         - Operational
-        - Maintenance
+        - Closeout
     validations:
       required: true
 
