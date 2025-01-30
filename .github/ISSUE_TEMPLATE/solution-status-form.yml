@@ -191,7 +191,75 @@ body:
         - label: 🎯 F2I DG Completion
         - label: ✅ Project Plan Baseline
 
-  # URL fields for each formulation item...
+  - type: input
+    id: daac-summary-url
+    attributes:
+      label: DAAC Selection Product Summary Documentation
+      placeholder: "https://..."
+      description: "Link to DAAC Selection Product Summary documents"
+
+  - type: input
+    id: stakeholder-sessions-url
+    attributes:
+      label: Agency Stakeholder Co-design Sessions Documentation
+      placeholder: "https://..."
+      description: "Link to co-design session materials"
+
+  - type: input
+    id: esdis-selection-url
+    attributes:
+      label: ESDIS DAAC Selection Process Documentation
+      placeholder: "https://..."
+      description: "Link to ESDIS selection documents"
+
+  - type: input
+    id: ipa-url
+    attributes:
+      label: Inter-Project Agreement Documentation
+      placeholder: "https://..."
+      description: "Link to IPA documents"
+
+  - type: input
+    id: icd-url
+    attributes:
+      label: Interface Control Document
+      placeholder: "https://..."
+      description: "Link to ICD"
+
+  - type: input
+    id: project-plan-url
+    attributes:
+      label: Project Plan Documentation
+      placeholder: "https://..."
+      description: "Link to Project Plan"
+
+  - type: input
+    id: f2i-dg-presentation-url
+    attributes:
+      label: F2I DG Presentation
+      placeholder: "https://..."
+      description: "Link to F2I Decision Gate presentation"
+
+  - type: input
+    id: f2i-dg-memo-url
+    attributes:
+      label: F2I DG Memo
+      placeholder: "https://..."
+      description: "Link to F2I Decision Gate memo"
+
+  - type: input
+    id: f2i-dg-notes-url
+    attributes:
+      label: F2I DG Meeting Notes
+      placeholder: "https://..."
+      description: "Link to F2I Decision Gate meeting notes"
+
+  - type: input
+    id: baseline-plan-url
+    attributes:
+      label: Baseline Project Plan Documentation
+      placeholder: "https://..."
+      description: "Link to baselined project plan"
 
   # Implementation Phase
   - type: checkboxes
