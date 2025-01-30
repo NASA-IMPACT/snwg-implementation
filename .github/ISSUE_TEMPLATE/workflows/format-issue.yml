@@ -1,0 +1,26 @@
+name: Format Solution Status Issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  format-issue:
+    if: contains(github.event.issue.labels.*.name, 'solution-overview')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install python-frontmatter jinja2 PyGithub
+
+      - name: Format Issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python .github/scripts/format_issue.py
