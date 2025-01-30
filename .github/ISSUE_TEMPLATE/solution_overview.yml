@@ -9,12 +9,15 @@ body:
     attributes:
       value: |
         # 📊 Solution Project Status Report
+        Please fill out the information below to create a new solution project status report.
 
   - type: dropdown
     id: project-status
     attributes:
       label: Status
       options:
+        - "✅ Operational"
+        - "Pre-Formulation"
         - "Formulation"
         - "Implementation"
         - "Operations"
@@ -28,30 +31,6 @@ body:
       label: Funded Until
       placeholder: "Enter funding end date"
     validations:
-      required: false
-
-  - type: input
-    id: implementation-lead
-    attributes:
-      label: 👨‍💼 Implementation Lead
-      placeholder: "Name"
-    validations:
-      required: true
-
-  - type: input
-    id: project-scientist
-    attributes:
-      label: 🔬 Project Scientist
-      placeholder: "Name"
-    validations:
-      required: true
-
-  - type: input
-    id: partner-org
-    attributes:
-      label: 🤝 Partner Organization
-      placeholder: "Organization name"
-    validations:
       required: true
 
   - type: dropdown
@@ -59,11 +38,11 @@ body:
     attributes:
       label: Assessment Cycle
       options:
-        - "1 (2016)"
-        - "2 (2018)"
-        - "3 (2020)"
-        - "4 (2022)"
-        - "5 (2024)"
+        - "Cycle 1 (2016-2017)"
+        - "Cycle 2 (2018-2019)"
+        - "Cycle 3 (2020-2021)"
+        - "Cycle 4 (2022-2023)"
+        - "Cycle 5 (2024-2025)"
     validations:
       required: true
 
@@ -86,10 +65,58 @@ body:
       required: true
 
   - type: input
+    id: implementation-lead
+    attributes:
+      label: 👨‍💼 Implementation Lead
+      placeholder: "Name"
+    validations:
+      required: true
+
+  - type: input
+    id: implementation-org
+    attributes:
+      label: Implementation Lead Organization
+      placeholder: "Organization"
+    validations:
+      required: true
+
+  - type: input
+    id: project-scientist
+    attributes:
+      label: 🔬 Project Scientist
+      placeholder: "Name"
+    validations:
+      required: true
+
+  - type: input
+    id: scientist-org
+    attributes:
+      label: Project Scientist Organization
+      placeholder: "Organization"
+    validations:
+      required: true
+
+  - type: input
+    id: partner-org
+    attributes:
+      label: 🤝 Partner Organization
+      placeholder: "Organization name"
+    validations:
+      required: true
+
+  - type: input
     id: stakeholder-survey
     attributes:
       label: 📝 Stakeholder Survey
       placeholder: "https://docs.google.com/..."
+
+  - type: input
+    id: product-name
+    attributes:
+      label: Primary Product Name
+      placeholder: "Enter product name"
+    validations:
+      required: true
 
   - type: input
     id: product-url
@@ -104,74 +131,27 @@ body:
     attributes:
       label: Product Description
       placeholder: "Brief description of the product and its purpose..."
-      value: "Enter a brief description of the product and its purpose..."
     validations:
       required: true
-
-  - type: input
-    id: sep-board
-    attributes:
-      label: 📋 SEP Board
-      placeholder: "https://github.com/..."
 
   - type: dropdown
-    id: sep-mandate
+    id: fact-sheet
     attributes:
-      label: SNWG MO Mandate Status
+      label: Fact Sheet Available
       options:
-        - "⏳ Pending Review"
-        - "Yes"
         - "No"
-    validations:
-      required: true
-
-  - type: textarea
-    id: key-stakeholders
-    attributes:
-      label: Key Stakeholders
-      value: |
-        - 🛰️ SPoRT
-        - 👥 Solution Project Implementation Team
-        - 🔍 OPERA
+        - "Yes"
     validations:
       required: true
 
   - type: input
-    id: user-assessment-results
+    id: fact-sheet-url
     attributes:
-      label: 🔮 Results
-      placeholder: "Enter assessment results URL"
+      label: Fact Sheet URL
+      placeholder: "https://..."
+      description: "Only required if Fact Sheet is available"
 
-  - type: input
-    id: assessment-folder
-    attributes:
-      label: 🗃️ Drive Folder
-      placeholder: "Enter drive folder URL"
-
-  - type: input
-    id: portal-url
-    attributes:
-      label: 🌐 NASA/ST Portal
-      placeholder: "https://earthdata.nasa.gov/..."
-
-  - type: input
-    id: training-url
-    attributes:
-      label: 📚 Training Resources
-      placeholder: "https://github.com/..."
-
-  - type: input
-    id: toolkit-url
-    attributes:
-      label: 🛠️ Implementation Tools
-      placeholder: "https://github.com/..."
-
-  - type: input
-    id: sow-url
-    attributes:
-      label: 📄 Statement of Work
-      placeholder: "https://docs.google.com/..."
-
+  # Pre-Formulation Phase
   - type: checkboxes
     id: pre-formulation
     attributes:
@@ -183,6 +163,21 @@ body:
         - label: 🎯 ATP DG Milestone
         - label: ✍️ ATP DG Memo Completion
 
+  - type: input
+    id: hq-kickoff-url
+    attributes:
+      label: HQ Kickoff Documentation
+      placeholder: "https://..."
+
+  - type: input
+    id: provider-kickoff-url
+    attributes:
+      label: Solution Provider Kickoff Documentation
+      placeholder: "https://..."
+
+  # Similar input fields for other pre-formulation items...
+
+  # Formulation Phase
   - type: checkboxes
     id: formulation
     attributes:
@@ -197,6 +192,9 @@ body:
         - label: 🎯 F2I DG Completion
         - label: ✅ Project Plan Baseline
 
+  # URL fields for each formulation item...
+
+  # Implementation Phase
   - type: checkboxes
     id: implementation
     attributes:
@@ -205,6 +203,7 @@ body:
         - label: 🧪 Operational Testing
         - label: 🎯 ORR Completion
 
+  # Operations Phase
   - type: checkboxes
     id: operations
     attributes:
@@ -213,25 +212,15 @@ body:
         - label: ✅ PVR Completion
         - label: 🚀 Provisional Operations Launch
         - label: 🌟 Validated Operations Launch
+
+  # Closeout Phase
+  - type: checkboxes
+    id: closeout
+    attributes:
+      label: Closeout Phase
+      options:
         - label: 📦 Project Closeout
         - label: 📢 Closeout Announcement
         - label: 📝 Final Report Preparation
         - label: ✍️ DG Memo Processing
         - label: 🗄️ Documentation Archival
-
-  - type: dropdown
-    id: fact-sheet
-    attributes:
-      label: Fact Sheet
-      options:
-        - "Not yet developed"
-        - "In Development"
-        - "Complete"
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        *Note: 🔒 Some linked documents may require additional access permissions.*
