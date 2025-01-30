@@ -16,7 +16,6 @@ body:
     attributes:
       label: Status
       options:
-        - "✅ Operational"
         - "Pre-Formulation"
         - "Formulation"
         - "Implementation"
@@ -38,11 +37,11 @@ body:
     attributes:
       label: Assessment Cycle
       options:
-        - "Cycle 1 (2016-2017)"
-        - "Cycle 2 (2018-2019)"
-        - "Cycle 3 (2020-2021)"
-        - "Cycle 4 (2022-2023)"
-        - "Cycle 5 (2024-2025)"
+        - "Cycle 1 (2016)"
+        - "Cycle 2 (2018)"
+        - "Cycle 3 (2020)"
+        - "Cycle 4 (2022)"
+        - "Cycle 5 (2024)"
     validations:
       required: true
 
