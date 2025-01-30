@@ -15,10 +15,10 @@ body:
     attributes:
       label: Status
       options:
-        - "✅ Operational"
-        - "Planning"
-        - "Development"
-        - "Maintenance"
+        - "Formulation"
+        - "Implementation"
+        - "Operations"
+        - "Closeout"
     validations:
       required: true
 
@@ -28,7 +28,7 @@ body:
       label: Funded Until
       placeholder: "Enter funding end date"
     validations:
-      required: true
+      required: false
 
   - type: input
     id: implementation-lead
